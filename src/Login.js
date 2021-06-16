@@ -12,7 +12,7 @@ function Login(props) {
   const handleLogin = () => {
     setError(null);
     setLoading(true);
-    axios.post('https://main.d3nk5su7abs05.amplifyapp.com:4000/users/signin', { username: username.value, password: password.value }).then(response => {
+    axios.post('https://main.d3nk5su7abs05.amplifyapp.com/users/signin', { username: username.value, password: password.value }).then(response => {
       setLoading(false);
       setUserSession(response.data.token, response.data.user);
      // props.history.push('/dashboard');
